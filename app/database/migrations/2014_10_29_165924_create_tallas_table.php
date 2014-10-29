@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateZapatosTable extends Migration {
+class CreateTallasTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,14 +12,13 @@ class CreateZapatosTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('zapatos', function($tabla) {
+		Schema::create('tallas', function($tabla) {
 			$tabla->increments('id');
-			$tabla->string('foto');
-			$tabla->string('descripcion');
-			$tabla->string('modelo');
-			$tabla->string('color');
-			$tabla->decimal('precio', 5, 2);
+			$tabla->unsignedInteger('zapato_id');
+			$tabla->decimal('talla', 2, 1);
 			$tabla->timestamps();
+
+			$tabla->foreign('zapato_id')->references('id')->on('zapatos');
 		});
 	}
 
@@ -30,7 +29,7 @@ class CreateZapatosTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('zapatos');
+		Schema::drop('tallas');
 	}
 
 }
