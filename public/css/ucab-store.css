@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+/*  UCAB store
+    UCAB Guayana
+    Tema: UCAB store
+    Tema URL: http://www.github.com/naderst/ucab-store
+    Autor:  Nader Abu Fakhr - naderst@gmail.com - @naderst
+            José Cols - josecolsg@gmail.com - @josecols
+    Version: 1.0
+*/
+
+/**
+ * Estilos generales
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url("../img/body-bg.png") repeat;
+    background-color: #f1f1f1;
+    font-family: 'Open Sans', sans-serif;
+}
+.input-container {
+    background: #FFF;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #666;
+    height: 40px;
+    float: left;
+    padding: 4px 5px 6px;
+    width: 300px;
+}
+.input-container i {
+    margin: 0 8px;
+}
+.input-container input[type=text] {
+    border: none;
+    color: #666;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    margin: 0 auto;
+    width: 240px;
+}
+.input-container input[type=text]:focus {
+    outline: none;
+}
+.fix {
+    clear: both;
+}
+/**
+ * Header
+ */
+
+#header {
+    background-color: #fff;
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3);
+    height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+}
+#header .content {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 100%;
+}
+#logo {
+    margin: 6px auto;
+}
+
+/**
+ * Contenido
+ */
+
+#content {
+    background-color: #fff;
+    border-bottom: 3px solid #fed200;
+    box-sizing: border-box;
+    margin: 90px auto 0;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+#content:before {
+    bottom: -6px;
+    border-bottom: 3px solid #13b4ea;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    z-index: -1;
+}
+#content:after {
+    bottom: -9px;
+    border-bottom: 3px solid #006225;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    z-index: -1;
+}
+
+@media only screen and (min-width: 800px) {
+    /**
+     * Header
+     */
+    #header .content {
+        width: 70%;
+        padding: 0;
+    }
+    
+    /**
+     * Contenido
+     */
+    #content {
+        border-radius: 8px;
+        box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, .3);
+        margin: 120px auto 10px;
+        padding: 20px;
+        width: 70%;
+        z-index: 1;
+    }
+    #content:before, #content:after {
+        border-radius: 8px;
+    }
+        
+}
