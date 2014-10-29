@@ -15,3 +15,21 @@ Route::get('/', function()
 {
 	return View::make('layout');
 });
+
+Route::group(array('prefix' => 'api'), function()
+{
+    /*
+        Rutas para controlador de Zapatos
+    */
+    
+    Route::get('zapatos', 'ZapatosController@index');
+    Route::get('zapatos/{id}', 'ZapatosController@ver');
+    Route::get('zapatos/{id}/comentarios', 'ZapatosController@comentarios');
+    Route::post('zapatos/{id}/comentarios', 'ZapatosController@guardarComentario');
+    
+    /*
+        Rutas para controlador de Comentarios
+    */
+    
+    Route::delete('comentarios/{id}', 'ComentariosController@eliminar');
+});
