@@ -8,7 +8,7 @@ class ZapatosController extends BaseController {
 
     public function ver($id)
     {
-        return Response::json(Zapato::find($id)->with('tallas')->get());
+        return Response::json(Zapato::with('tallas')->find($id));
     }
     
     public function comentarios($id)
