@@ -6,4 +6,9 @@ class Zapato extends Eloquent {
         return $this->hasMany('Comentario');
     }
     
+    public function tallas()
+    {
+        return $this->hasMany('Talla');
+    }
+    
 }

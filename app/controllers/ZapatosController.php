@@ -3,12 +3,12 @@ class ZapatosController extends BaseController {
     
     public function index()
     {
-        return Response::json(Zapato::all());
+        return Response::json(Zapato::with('tallas')->get());
     }
 
     public function ver($id)
     {
-        return Response::json(Zapato::find($id)->get());
+        return Response::json(Zapato::find($id)->with('tallas')->get());
     }
     
     public function comentarios($id)
