@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'ucab-blog',
+			'database'  => 'ucab-store',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',
