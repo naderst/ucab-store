@@ -18,7 +18,7 @@ class CreateZapatosTable extends Migration {
 			$tabla->string('descripcion');
 			$tabla->string('modelo');
 			$tabla->string('color');
-			$tabla->decimal('precio', 5, 2);
+			$tabla->decimal('precio', 7, 2);
 			$tabla->timestamps();
 		});
 	}

@@ -15,7 +15,7 @@ class CreateTallasTable extends Migration {
 		Schema::create('tallas', function($tabla) {
 			$tabla->increments('id');
 			$tabla->unsignedInteger('zapato_id');
-			$tabla->decimal('talla', 2, 1);
+			$tabla->decimal('talla', 3, 1);
 			$tabla->timestamps();
 
 			$tabla->foreign('zapato_id')->references('id')->on('zapatos');
