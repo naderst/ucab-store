@@ -22,6 +22,18 @@
 
     }
 
+    function publicarComentario(scope, http, zapatoID) {
+        http.post('api/zapatos/' + zapatoID + '/comentarios', scope.nuevoComentario)
+        .success(function(data) {         
+            scope.zapato.comentarios.push(scope.nuevoComentario);
+            scope.nuevoComentario = {usuario:null, comentario:null};
+        })
+        .error(function(data) {
+            console.log(data);
+        });
+
+    }
+
     /**
      * Controllers
      */
@@ -36,6 +48,12 @@
         function ($scope, $http, $routeParams) {
             // Atributos
             $scope.zapato = cargarZapato($scope, $http, $routeParams.zapatoID);
+            $scope.nuevoComentario = {usuario:null, comentario:null};
+
+            // Métodos
+            $scope.publicarComentario = function() {
+                publicarComentario($scope, $http, $routeParams.zapatoID);                
+            }
      }]);
 
 

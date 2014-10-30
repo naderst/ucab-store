@@ -95,6 +95,9 @@ hr {
 .button:active {
     background: linear-gradient(#15847b, #14A99C);
 }
+.preview {
+    color:#444;
+}
 /**
  * Header
  */
@@ -106,7 +109,7 @@ hr {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 4;
     text-align: center;
 }
 #header .content {
@@ -126,7 +129,7 @@ hr {
     background-color: #fff;
     border-bottom: 3px solid #fed200;
     box-sizing: border-box;
-    margin: 90px auto 0;
+    margin: 90px auto 15px;
     padding: 20px;
     position: relative;
     width: 100%;
@@ -213,6 +216,9 @@ hr {
     list-style: none;
     padding: 10px 20px;
 }
+#content .comentarios li {
+    padding: 4px 2px;
+}
 #content .comentarios .usuario {
     font-weight: 700;   
 }
@@ -239,7 +245,7 @@ hr {
     #content {
         border-radius: 8px;
         box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, .3);
-        margin: 120px auto 10px;
+        margin: 120px auto 30px;
         padding: 20px;
         width: 70%;
         z-index: 1;

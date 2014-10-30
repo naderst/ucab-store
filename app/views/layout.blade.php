@@ -13,7 +13,7 @@
 <body >
     <header id="header">
         <div class="content">
-            <img src="img/logo.png" alt="UCAB store" id="logo" height="60">
+            <a href="index"><img src="img/logo.png" alt="UCAB store" id="logo" height="60"></a>
         </div>
     </header>
 

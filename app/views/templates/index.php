@@ -9,7 +9,7 @@
 	<div class="imagen" style="background-image: url('img/zapatos/{{zapato.foto}}');"></div>
 	<h2><a href="zapatos/{{zapato.id}}" ng-bind="zapato.modelo"></a></h2>
 	<p ng-bind="zapato.descripcion"></p>
-	<h3 class="right" ng-bind="zapato.precio"></h3>
+	<h3 class="right" ng-bind="zapato.precio | currency:'VEF '"></h3>
 </article>
 
 <div class="fix"></div>
