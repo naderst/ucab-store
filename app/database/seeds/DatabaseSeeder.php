@@ -22,6 +22,7 @@ class ZapatosTableSeeder extends Seeder {
 
     public function run()
     {
+        DB::table('comentarios')->delete();
         DB::table('tallas')->delete();
         DB::table('zapatos')->delete();
         
@@ -76,6 +77,60 @@ class ZapatosTableSeeder extends Seeder {
         
         Talla::create(array(
             'talla' => 8,
+            'zapato_id' => $id
+        ));
+        
+        /*
+            Louis Vuitton Hockenheim Moccasin
+        */
+        
+        $id = Zapato::create(array(
+            'descripcion' => 'Zapato de vestir',
+            'modelo' => 'Hockenheim Moccasin',
+            'precio' => 34000.00,
+            'color' => 'Negro',
+            'foto' => 'LV.png'
+        ))->id;
+        
+        Talla::create(array(
+            'talla' => 7,
+            'zapato_id' => $id
+        ));
+        
+        Talla::create(array(
+            'talla' => 9,
+            'zapato_id' => $id
+        ));
+        
+        Talla::create(array(
+            'talla' => 10,
+            'zapato_id' => $id
+        ));
+        
+        /*
+            RS21 Moscu Men
+        */
+        
+        $id = Zapato::create(array(
+            'descripcion' => 'Zapato deportivo',
+            'modelo' => 'Moscu Men',
+            'precio' => 1500.00,
+            'color' => 'Gris',
+            'foto' => 'rs21.jpg'
+        ))->id;
+        
+        Talla::create(array(
+            'talla' => 7,
+            'zapato_id' => $id
+        ));
+        
+        Talla::create(array(
+            'talla' => 9,
+            'zapato_id' => $id
+        ));
+        
+        Talla::create(array(
+            'talla' => 10,
             'zapato_id' => $id
         ));
     }
