@@ -1,6 +1,10 @@
 (function () {
     var app = angular.module('ucab-store', ['ngRoute']);
 
+    /**
+     * Funciones privadas del módulo
+     */
+
     function cargarZapatos(scope, http) {
         http.get('api/zapatos')
         .success(function(data) {         
@@ -62,6 +66,7 @@
      */
      app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider)
      {
+        // Rutas
         $routeProvider
         .when('/', {
             templateUrl: 'tpl/index',
@@ -74,8 +79,7 @@
         .when('/zapatos/:zapatoID', {
             templateUrl: 'tpl/zapato',
             controller: 'ZapatoController'
-        })
-        .otherwise({templateUrl: 'tpl/errores/404'});
+        });
 
         $locationProvider.html5Mode(true);
     }]);

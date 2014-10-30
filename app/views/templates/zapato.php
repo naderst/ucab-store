@@ -1,3 +1,4 @@
+<!-- Detalle del zapato -->
 <article class="zapato-full">
     <div class="imagen" style="background-image: url('img/zapatos/{{zapato.foto}}');"></div>
     <h2 ng-bind="zapato.modelo"></h2>
@@ -9,6 +10,7 @@
 
 <hr>
 
+<!-- Comentarios existentes -->
 <section class="comentarios" ng-show="(nuevoComentario.usuario && nuevoComentario.comentario) || zapato.comentarios">
     <h3>Comentarios</h3>
     <ul>
@@ -16,6 +18,7 @@
             <span class="usuario" ng-bind="comentario.usuario"></span>
             <span class="comentario" ng-bind="comentario.comentario"></span>
         </li>
+        <!-- Previsualización del nuevo comentario -->
         <li class="preview" ng-show="nuevoComentario.usuario && nuevoComentario.comentario">
             <i class="fa fa-eye"></i>
             <span class="usuario" ng-bind="nuevoComentario.usuario"></span>
@@ -25,6 +28,7 @@
     </ul>
 </section>
 
+<!-- Nuevo comentario -->
 <section class="nuevo-comentario">
     <h3 class="margin-small">Nuevo comentario</h3>
 

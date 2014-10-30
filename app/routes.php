@@ -11,11 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('layout');
-});
-
+/*
+    Rutas de datos
+*/
 Route::group(array('prefix' => 'api'), function()
 {
     /*
@@ -34,8 +32,14 @@ Route::group(array('prefix' => 'api'), function()
     Route::delete('comentarios/{id}', 'ComentariosController@eliminar');
 });
 
+/*
+    Rutas de templates
+*/
 Route::group(array('prefix' => 'tpl'), function()
 {
+    /*
+        Rutas para templates de zapatos
+    */
     Route::get('index', function()
     {
         return View::make('templates.index');
@@ -47,6 +51,9 @@ Route::group(array('prefix' => 'tpl'), function()
     });
 });
 
+/*
+    Ruta por defecto
+*/
 App::missing(function() {
     return View::make('layout');
 });
