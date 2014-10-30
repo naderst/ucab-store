@@ -33,3 +33,20 @@ Route::group(array('prefix' => 'api'), function()
     
     Route::delete('comentarios/{id}', 'ComentariosController@eliminar');
 });
+
+Route::group(array('prefix' => 'tpl'), function()
+{
+    Route::get('index', function()
+    {
+        return View::make('templates.index');
+    });
+
+    Route::get('zapato', function()
+    {
+        return View::make('templates.zapato');
+    });
+});
+
+App::missing(function() {
+    return View::make('layout');
+});
